@@ -63,7 +63,7 @@ const getTotalPrice = (items = []) => {
 
 const ProductList = () => {
   const [addedItems, setAddedItems] = useState([]);
-  const { tg, queryId, user, telegramUserId, chatId } = useTelegram();
+  const { tg, queryId, user, telegramUserId, chatId, initData } = useTelegram();
 
   const onSendData = useCallback(() => {
     const data = {
@@ -73,8 +73,9 @@ const ProductList = () => {
       user,
       telegramUserId,
       chatId,
+      initData,
     };
-    fetch("http://localhost:8000/web-data", {
+    fetch("http://localhost:3000/web-bot/subscriber/profile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
