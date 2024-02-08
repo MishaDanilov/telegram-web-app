@@ -75,7 +75,7 @@ const ProductList = () => {
       chatId,
       initData,
     };
-    fetch("http://localhost:3000/web-bot/subscriber/profile", {
+    fetch("http://localhost:3000/api/web-bot/subscriber/profile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
