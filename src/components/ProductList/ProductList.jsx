@@ -76,8 +76,8 @@ const ProductList = () => {
       initData,
     };
 
-    //"http://localhost:3000/api/web-bot/subscriber/profile"
-    fetch("http://localhost:8000/web-data", {
+    //"http://localhost:8000/web-data"
+    fetch("http://localhost:3000/api/web-bot/subscriber/profile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
