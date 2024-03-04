@@ -65,6 +65,7 @@ const ProductList = () => {
   const [addedItems, setAddedItems] = useState([]);
   const {
     tg,
+    botInfo,
     queryId,
     user,
     telegramUserId,
@@ -76,6 +77,7 @@ const ProductList = () => {
   const onSendData = useCallback(() => {
     const data = {
       tg,
+      botInfo,
       products: addedItems,
       totalPrice: getTotalPrice(addedItems),
       queryId,
