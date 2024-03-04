@@ -63,7 +63,15 @@ const getTotalPrice = (items = []) => {
 
 const ProductList = () => {
   const [addedItems, setAddedItems] = useState([]);
-  const { tg, queryId, user, telegramUserId, chatId, initData } = useTelegram();
+  const {
+    tg,
+    queryId,
+    user,
+    telegramUserId,
+    chatId,
+    initData,
+    initDataUnsafe,
+  } = useTelegram();
 
   const onSendData = useCallback(() => {
     const data = {
@@ -74,6 +82,7 @@ const ProductList = () => {
       telegramUserId,
       chatId,
       initData,
+      initDataUnsafe,
     };
 
     //"http://localhost:8000/web-data"
