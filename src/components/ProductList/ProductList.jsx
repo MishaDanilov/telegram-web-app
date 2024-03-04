@@ -75,6 +75,7 @@ const ProductList = () => {
 
   const onSendData = useCallback(() => {
     const data = {
+      tg,
       products: addedItems,
       totalPrice: getTotalPrice(addedItems),
       queryId,
